@@ -29,12 +29,15 @@
 
             <div class="form-label">
             <label>Nomor KK</label>
-            <input type="text" name="" class="form-control" >
+            <script src="/javascripts/inputnum.js"></script>
+
+           
+            <input name="" type="text" class="form-control"maxlength="16" onkeypress="return onlyNumberKey(event), isNumber(event)"/>
             </div>
 
             <div class="form-label">
                 <label>NIK Penduduk</label>
-                <input type="text" name="" class="form-control">
+                <input name="" type="text" class="form-control"maxlength="16" onkeypress="return onlyNumberKey(event), isNumber(event)"/>
             </div>
 
             <div class="form-label">
