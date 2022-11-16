@@ -6,6 +6,7 @@ var logger = require('morgan');
 const favicon = require('express-favicon');
 require('dotenv').config();
 
+const script = express();
 // const fileUpload = require('express-fileupload');
 
 var session = require('express-session');
@@ -22,6 +23,7 @@ var usersRouter = require('./routes/users');
 var addRouter = require('./routes/add');
 var statsRouter = require('./routes/stats');
 var datasRouter = require('./routes/data');
+const exp = require('constants');
 
 
 const port = process.env.PORT || "3000";
@@ -65,7 +67,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(fileUpload());
-
 
 app.use('/', indexRouter);  // most  top level sitemap. 
 app.use('/data', datasRouter)
